@@ -10,7 +10,11 @@
 import java.util.Stack;
 
 public class GenericStack<Item> extends Stack<Item> {
-    private final static int STACK_SIZE = 15;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final static int STACK_SIZE = 15;
     private Item items[];
     private int topItem;
 
@@ -18,7 +22,8 @@ public class GenericStack<Item> extends Stack<Item> {
     	this(STACK_SIZE);
     }
     
-    public GenericStack(int initSize) {
+    @SuppressWarnings("unchecked")
+	public GenericStack(int initSize) {
         items = (Item[]) new Object[initSize];
         topItem = -1;
     }	
